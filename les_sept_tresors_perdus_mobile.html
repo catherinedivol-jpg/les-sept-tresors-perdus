@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Sept Trésors Perdus</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#17201e;color:#f5ead5;font-family:Georgia,serif;line-height:1.55}
+header{padding:48px 20px 30px;background:linear-gradient(0deg,#17201e,transparent),url('https://images.unsplash.com/photo-1513415277900-a62401e19be4?auto=format&fit=crop&w=1400&q=80') center/cover;min-height:260px;display:flex;align-items:end}
+header div,main{max-width:760px;margin:auto;width:100%}small{color:#e7bd71;letter-spacing:.16em;text-transform:uppercase;font:12px Arial}
+h1{font-size:clamp(38px,9vw,64px);line-height:1;margin:10px 0}h2{color:#e7bd71;margin-top:0}
+main{padding:18px 15px 50px}.card{background:#2b2923;border:1px solid #79613e;border-radius:14px;padding:20px;margin:15px 0}
+a.btn{display:block;text-align:center;text-decoration:none;color:#fff4dc;background:linear-gradient(#9c7138,#684722);border:1px solid #e1bd76;border-radius:9px;padding:13px 16px;margin:12px 0;font-weight:bold}
+a.choice{display:block;background:#1c2926;border:1px solid #7b694a;border-radius:9px;padding:13px;margin:10px 0;color:#fff4dc;text-decoration:none}
+.note{color:#c7baa2;font-size:14px}.screen{display:none}.screen:target{display:block}#accueil{display:block}#accueil:target~#jeu{display:none}#jeu:target{display:block}#jeu:target~#accueil{display:none}
+.answer{display:none;background:#1b3028;border-left:4px solid #d4ad61;padding:12px;border-radius:6px;margin-top:12px}.answer:target{display:block}
+.badge{display:inline-block;border:1px solid #b18d52;color:#f0d49b;border-radius:20px;padding:4px 9px;font:12px Arial}
+footer{text-align:center;color:#a99c85;font:12px Arial;padding:20px}
+</style>
+</head>
+<body>
+<header><div><small>Une aventure autour du monde</small><h1>Les Sept<br>Trésors Perdus</h1><p>Un carnet ancien. Une carte incomplète. Sept trésors à retrouver.</p></div></header>
+<main>
+<section id="accueil" class="screen card">
+<span class="badge">Chapitre 1 · Vietnam</span>
+<h2>Le carnet de l'exploratrice</h2>
+<p>Dans le grenier d'une vieille demeure, tu découvres un coffre couvert de poussière. À l'intérieur : un carnet de voyage, une boussole étrange et une carte dont sept emplacements sont effacés.</p>
+<p><em>« Pour retrouver les trésors, il faut d'abord apprendre à regarder le monde. »</em></p>
+<p>Ta première destination sera Hoi An, au Vietnam. Le voyage commence !</p>
+<a class="btn" href="#jeu">Ouvrir le carnet et commencer</a>
+<p class="note">Prototype de démonstration : appuie sur les boutons pour avancer.</p>
+</section>
+
+<section id="jeu" class="screen">
+<div class="card">
+<span class="badge">Vietnam · Hoi An</span>
+<h2>Les lanternes de Hoi An</h2>
+<p>À la tombée du soir, tu arrives dans les ruelles de Hoi An. Des lanternes colorées se reflètent sur la rivière. Un vieux marchand t'interpelle :</p>
+<p>« L'exploratrice que tu recherches est passée ici. Mais avant de te confier son indice, montre-moi que tu sais observer notre ville. »</p>
+</div>
+<div class="card">
+<h2>Épreuve 1 · Culture et observation</h2>
+<p>Quelle particularité rend la vieille ville de Hoi An si reconnaissable, notamment à la nuit tombée ?</p>
+<a class="choice" href="#bonne1">A — Ses maisons anciennes et ses lanternes colorées</a>
+<a class="choice" href="#mauvaise1">B — Ses grands gratte-ciel illuminés</a>
+<a class="choice" href="#mauvaise1">C — Ses pyramides de pierre</a>
+<div id="bonne1" class="answer"><strong>Bravo !</strong> Tu as l'œil d'une exploratrice. Tu gagnes 100 points. <a class="btn" href="#epreuve2">Continuer</a></div>
+<div id="mauvaise1" class="answer">Pas tout à fait ! Hoi An est célèbre pour ses maisons anciennes et ses lanternes. <a class="btn" href="#epreuve2">Réessayer l'aventure</a></div>
+</div>
+</section>
+
+<section id="epreuve2" class="screen card">
+<span class="badge">Épreuve 2 · Géographie</span><h2>Sur la carte</h2>
+<p>Dans quelle partie du Vietnam se trouve Hoi An ?</p>
+<a class="choice" href="#indice">Au centre du Vietnam</a>
+<a class="choice" href="#erreur2">Au nord du Vietnam</a>
+<a class="choice" href="#erreur2">Tout au sud du Vietnam</a>
+<div id="indice" class="answer"><strong>Exact !</strong> Hoi An se trouve dans le centre du Vietnam. <a class="btn" href="#recompense">Découvrir l'indice</a></div>
+<div id="erreur2" class="answer">La bonne réponse est le centre du Vietnam. <a class="btn" href="#epreuve2">Réessayer</a></div>
+</section>
+
+<section id="recompense" class="screen card">
+<span class="badge">Indice découvert</span><h2>La première page secrète</h2>
+<p>Le marchand te remet un morceau de papier portant ces mots :</p>
+<p><em>« Là où la pierre raconte les rois, la jungle garde la mémoire. Cherche la cité aux visages de pierre. »</em></p>
+<p>Ton carnet indique une nouvelle destination : <strong>Angkor, au Cambodge</strong>. Le premier fragment de carte est à toi !</p>
+<a class="btn" href="#fin">Inscrire la découverte dans mon carnet</a>
+</section>
+
+<section id="fin" class="screen card">
+<h2>Bravo, voyageuse !</h2>
+<p>Tu as terminé la première étape de ton aventure. Ton prochain voyage te conduira vers les temples d'Angkor.</p>
+<p class="note">Ceci est une première maquette. Les sauvegardes, le personnage personnalisable et les autres chapitres seront ajoutés dans les prochaines versions.</p>
+<a class="btn" href="#accueil">Revoir le début</a>
+</section>
+<footer>Les Sept Trésors Perdus · Prototype mobile simplifié</footer>
+</main>
+</body></html>
